@@ -1,0 +1,41 @@
+@-webkit-keyframes typed {
+    0%, 0.5%{
+        content: "H";
+    }
+
+    0.5%, 1%{
+        content: "Ho";
+    }
+
+    1%, 1.5%{
+        content: "Hol";
+    }
+
+    1.5%, 2%{
+        content: "Hola";
+    }
+
+    2.5%, 3.0%{
+        content: "Hol";
+    }
+
+    3.5%, 4.0%{
+        content: "Ho";
+    }
+
+    4.5%, 5.0%{
+        content: "H";
+    }
+
+    5.5%, 6.0%{
+        content: "";
+    }
+
+
+
+
+}
+
+#typed-solo{
+    -webkit-animation: typed 18.36s linear 1s infinite;
+}

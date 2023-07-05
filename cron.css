@@ -1,0 +1,250 @@
+/* Header style and animation */
+
+header{
+    animation: glitch 1s linear infinite;
+    
+}
+
+@keyframes glitch{
+    2%, 64%{
+        transform: translate(2px, 0) skew(0deg);
+    }
+    4%, 60%{
+        transform: translate(-2px, 0) skew(0deg);
+    }
+    62%{
+        transform: translate(0,0) skew(5deg);
+    }
+}
+
+header:before,
+header:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+}
+
+header:before{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100%, 100% 33%, 0 33%);
+    -webkit-animation-phat: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+header{
+    border-bottom: 1px solid #604f6f;
+    width: 1080px;
+    height: 130px;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: aqua;
+    font-size: 50px;
+}
+
+/* Background style and animation */
+
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-120deg, #fa46d0 50%, #270048 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+}
+.bg3 {
+    animation-duration:5s;
+}
+
+
+@keyframes slide {
+    0% {
+    transform:translateX(-25%);
+    }
+    100% {
+    transform:translateX(25%);
+    }
+}
+
+/* H3 style  */
+
+h2{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+/* Cronophase  style */
+
+/*- Screen Sizes*/
+/*import fonts*/
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+/*media queries*/
+
+
+.wrapper {
+margin: 3.125em auto;
+padding: 1em 5em 1em;
+max-width: 1000px;
+}
+
+h1 {
+color: aqua;
+font-family: "Open Sans", "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+text-align: center;
+}
+
+/* - &:nth-child(1) {
+			 grid-area: entry1;
+		 }
+   - useful timesaver if there is a lengthy list
+*/
+.timeline {
+    line-height: 1.5em;
+    font-size: 14px;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    position: relative;
+    counter-reset: section;
+}
+.timeline:before {
+    content: "";
+    width: 10px;
+    height: 100%;
+    background: #87ceeb;
+    position: absolute;
+    top: 0;
+    left: -3.313em;
+    border-radius: 40px 40px;
+    
+}
+
+.timeline--entry {
+    position: relative;
+    background-color: #fa46d0;
+}
+.timeline--entry__title {
+    color: white;
+    background-color: #270048;
+    font-family: "Oswald", Georgia, Cambria, "Times New Roman", Times, serif;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 1em;
+}
+
+.timeline--entry__detail {
+    background-color: #e563ff;
+    padding: 1em;
+    margin: 0;
+}
+
+
+@supports (display: grid) {
+@media (min-width: 768px) {
+    .timeline {
+    display: grid;
+    grid-gap: 4.75em;
+    grid-template-areas: ".  entry1" "entry2  ." ". entry3" "entry4 ." ". entry5";
+}
+.timeline:before {
+    left: 49.5%;
+}
+.timeline--entry:nth-child(1) {
+    grid-area: entry1;
+}
+.timeline--entry:nth-child(2) {
+    grid-area: entry2;
+}
+.timeline--entry:nth-child(3) {
+    grid-area: entry3;
+}
+.timeline--entry:nth-child(4) {
+    grid-area: entry4;
+}
+.timeline--entry:nth-child(5) {
+    grid-area: entry5;
+}
+.timeline--entry:nth-child(6) {
+    grid-area: entry6;
+}
+.timeline--entry:nth-child(7) {
+    grid-area: entry7;
+}
+.timeline--entry:nth-child(8) {
+    grid-area: entry8;
+}
+.timeline--entry:nth-of-type(odd):before {
+    left: -3.8em;
+}
+
+}
+}
+
+.timeline--entry{
+        animation: glitch 1s linear infinite;
+        
+    }
+    
+    @keyframes glitch{
+        2%, 64%{
+            transform: translate(2px, 0) skew(0deg);
+        }
+        4%, 60%{
+            transform: translate(-2px, 0) skew(0deg);
+        }
+        62%{
+            transform: translate(0,0) skew(5deg);
+        }
+    }
+    
+.timeline--entry:before,
+.timeline-.timeline--entry{
+        content: attr(title);
+        position: absolute;
+        left: 0;
+    }
+    
+.timeline--entry:before{
+        animation: glitchTop 1s linear infinite;
+        clip-path: polygon(0 0, 100%, 100% 33%, 0 33%);
+        -webkit-animation-phat: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    }
+    
+    @keyframes glitchTop{
+        2%,64%{
+            transform: translate(2px, -2px);
+        }
+        4%,60%{
+            transform: translate(-2px,2px);
+    } 
+        62%{
+            transform: translate(13px, -1px) skew(-13deg);
+        }
+    }
+    
+.timeline--entry:after{
+        animation: glitchBottom 1.5s linear infinite;
+        clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+        -webkit-animation-path:  polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    }
+    
+    @keyframes glitchBottom{
+        2%,64%{
+            transform: translate(-2px, 0);
+    }
+        4%,60%{
+            transform: translate(-2px, 0);
+        }
+        62%{
+            transform: translate(-22px, 5px) skew(21deg);
+        }
+    }
