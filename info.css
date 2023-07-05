@@ -1,0 +1,99 @@
+header{
+    border-bottom: 1px solid #604f6f;
+    width: 1080px;
+    height: 130px;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: aqua;
+    font-size: 50px;
+}
+/* body style */
+body{
+    
+    background-image: linear-gradient(#572483, #9f2483);
+    background-repeat: no-repeat;
+}
+
+h2{
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Style order events for hours */
+.lista-de-horas{
+    margin: auto;
+    text-align: center;
+    filter: blur(30px);
+}
+
+.lista-de-horas:hover{
+    filter: blur(0px);
+    transition: 0.5s;
+}
+
+h4{
+    color: cyan;
+    font-size: 30px;
+}
+
+.p-e{
+    
+    font-size: 20px;
+}
+
+
+
+
+/* counter new bottom */
+#counter{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+
+.simply-section{
+    background-color: #572483;
+    height: 90px;
+    width: 90px;
+    margin: 0 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.simply-section:hover{
+    box-shadow: 0 0 5px rgb(222, 90, 255), 0 0 15px rgb(222, 90, 255), 0 0 30px rgb(222, 90, 255);
+}
+
+.simply-amount{
+    font-family: monospace;
+    text-align: center;
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    color: rgb(222, 90, 255);
+}
+
+.simply-word{
+    font-weight: 200;
+    font-size: 200;
+    color: rgb(222, 90, 255);
+}
+
+h3{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
+
+
+#count-div{
+    position: relative;
+    margin-top: 100px;
+}

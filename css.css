@@ -1,0 +1,319 @@
+/* header behavior */
+header{
+    border-bottom: 1px solid #604f6f;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: aqua;
+    font-size: 50px;
+    height: 120px;
+    text-align: center;
+	width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+	left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	top: 0; /* Posicionamos la cabecera pegada arriba */
+	position: fixed;
+    background-image: linear-gradient(#1f0139, #00cbef) ;
+    z-index: 10000;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* body style */
+html{
+    background-image: linear-gradient(#572483, #9f2483);
+}
+
+/* body */
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #ffffff;
+	padding-top: 180px; /* Relleno superior igual a la altura de la cabecera*/
+}
+
+/* box interaction behavior & style */
+
+.container-box{
+    
+    text-align: center;
+    align-content:center ;
+    align-items: center;
+    position: relative;
+}
+
+@media screen {
+    
+}
+
+
+/*counter anim-box*/
+#counter{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    
+}
+
+
+
+.simply-section{
+    background-color: #9f2483;
+    height: 180px;
+    width: 180px;
+    margin: 0 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.simply-section:hover{
+    box-shadow: 0 0 5px aqua, 0 0 15px aqua, 0 0 30px aqua;
+}
+
+.simply-amount{
+    font-family: monospace;
+    text-align: center;
+    display: block;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.simply-word{
+    font-weight: 300;
+    font-size: 300;
+}
+
+/* info style & properties */
+
+h2, p{
+    text-align: center;
+}
+
+#go-maps{
+    
+    display: grid;
+    place-items: center;
+    border: 5px;
+    
+}
+
+#map-img{
+    margin: 30px 30px 30px 30px;
+}
+
+#map-img:hover{
+    border:  solid 2px #00ffff;
+    box-shadow: 0 0 10px #ff00c3, 0 0 50px #ff00c3;
+    transition: 0.5;
+    width: 325px;
+    height: 325px;
+}
+
+.content-ins{
+    display: grid;
+    place-items: center;
+    margin: auto
+}
+
+.ccc{
+    display: inline-flex;
+    margin: 40px 40px 40px 40px;
+}
+
+
+#form-ca{
+    margin: 30px 30px 30px 30px;
+    border: solid 2px #110e10;
+    justify-content: center;
+    letter-spacing: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+
+
+}
+
+/*Glitch effect for logo*/
+
+header{
+    animation: glitch 1s linear infinite;
+    
+}
+
+@keyframes glitch{
+    2%, 64%{
+        transform: translate(2px, 0) skew(0deg);
+    }
+    4%, 60%{
+        transform: translate(-2px, 0) skew(0deg);
+    }
+    62%{
+        transform: translate(0,0) skew(5deg);
+    }
+}
+
+header:before,
+header:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+}
+
+header:before{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100%, 100% 33%, 0 33%);
+    -webkit-animation-phat: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+    2%,64%{
+        transform: translate(2px, -2px);
+    }
+    4%,60%{
+        transform: translate(-2px,2px);
+} 
+    62%{
+        transform: translate(13px, -1px) skew(-13deg);
+    }
+}
+
+header:after{
+    animation: glitchBottom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-animation-path:  polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBottom{
+    2%,64%{
+        transform: translate(-2px, 0);
+}
+    4%,60%{
+        transform: translate(-2px, 0);
+    }
+    62%{
+        transform: translate(-22px, 5px) skew(21deg);
+    }
+}
+
+/*All*/
+*{
+    font-family: monospace;
+}
+
+/*Test change animations at button*/
+
+/*Home button*/
+
+#box-ref-name_1:hover,
+#box-ref-name_1:focus{
+    box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+#box-ref-name_1{
+    --color: #9f2483;
+    --hover: aqua;
+}
+
+#box-ref-name_1, #box-ref-name_2,
+#box-ref-name_3{
+    color: var(--color);
+    -webkit-transition: 0.25s;
+    transition: 0.25s;
+}
+
+#box-ref-name_1, #box-ref-name_2,
+#box-ref-name_3:hover, #box-ref-name_1, #box-ref-name_2,
+#box-ref-name_3:focus{
+    border-color: #00ffff;
+    color: #fff;
+}
+
+#box-ref-name_1, #box-ref-name_2,
+#box-ref-name_3{
+    background: none;
+    border: 2px solid #fa46d0;
+    color: black;
+    font: inherit;
+    line-height: 1;
+    margin: 1em;
+    padding: 1em 2em;
+    text-decoration: none;
+}
+
+/*Info button*/
+
+#box-ref-name_2:hover,
+#box-ref-name_2:focus{
+    -webkit-animation: pulse 1s;
+            animation: pulse 1s;
+    box-shadow: 0 0 0 2em rgba(95, 0, 101, 0);
+}
+
+@-webkit-keyframes pulse {
+    0% {
+    box-shadow: 0 0 0 0 var(--hover);
+    }
+}
+
+@keyframes pulse {
+    0% {
+    box-shadow: 0 0 0 0 var(--hover);
+    }
+}
+
+#box-ref-name_2{
+    --color:#9f2483;
+    --hover:aqua;
+}
+
+/*form button*/
+
+#box-ref-name_3:hover,
+#box-ref-name_3:focus{
+    box-shadow: inset -5em 0 0 0 var(--hover), inset 5em 0 0 0 var(--hover);
+}
+
+#box-ref-name_3{
+    --color:#9f2483;
+    --hover: aqua;
+}
+
+
+/*Background effect*/
+
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-120deg, #fa46d0 50%, #270048 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+.bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+}
+.bg3 {
+    animation-duration:5s;
+}
+
+
+@keyframes slide {
+    0% {
+    transform:translateX(-25%);
+    }
+    100% {
+    transform:translateX(25%);
+    }
+}
