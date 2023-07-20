@@ -708,39 +708,43 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100px;
 }
 
+.footer-container p{
+    padding: 10px 0px 10px 0px;
+}
 
-
+.cl{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 
 .logs{
     height: 15px;
     width: 15px;
     margin-left: 5px;
     margin-right: 5px;
+    object-fit: contain;
 }
 
 li{
-    
-    margin: 10px;
-    
+    margin: 5px;
     display:  inline-flex;
     align-items: center;
     align-content: center;
     align-self: center;
-    
-
 }
 
 .logs{
-    height: 40px;
-    width: 40px;
-    border-radius: 100%;
+    height: 50px;
+    width: 90px;
+    border-radius: 15%;
 }
 .logs:hover{
     transform: translateZ(50%);
-    box-shadow: 0 0 55px #572483;
+    filter: drop-shadow(0px 0px 20px #572483);
     transition: 0.5s;
 }
 
@@ -785,22 +789,13 @@ li{
     font-size: 300;
 }
 
-footer {
-    border-radius: 15px 15px 0px 0px;
-}
-
-.logs {
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-}
-
-li {
-    margin: 5px;
-    display: inline-flex;
-    align-items: center;
-    align-content: center;
-    align-self: center;
-}
+    footer {
+        border-radius: 15px 15px 0px 0px;
+    }
+    
+    .logs{
+        width: 50px;
+        height: 30px;
+    }
 
 }
